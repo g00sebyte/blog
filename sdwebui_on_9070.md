@@ -11,6 +11,8 @@ ref: https://forums.linuxmint.com/viewtopic.php?t=442510
 
 ## Stable Diffusion WebUI Setup
 
+If you've already setup your 9070 / 9070xt and achieving expected performance, or if you have another AMD card (RDNA2 or newer) and it's properly configured then these steps should work for you too.
+
 **1. Ensure system is up to date:**
 ```
 sudo apt update
