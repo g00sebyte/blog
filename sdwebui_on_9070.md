@@ -1,6 +1,6 @@
 # Running Stable Diffusion via the WebUI on a Radeon 9070 / 9070xt
 
-This guide applies specifically to **debian linux distros.** Given you're reading this I imagine you bought the 9070xt for gaming as well, so to make sure it's properly configured on your system let's set that up first. If you've already been gaming on your system and getting expected perforamnce you can skip the following.
+This guide applies specifically to **debian linux distros.** Given you're reading this I imagine you bought GPU for gaming as well, so to make sure it's properly configured on your system let's set that up first. If you've already been gaming on your system and getting expected perforamnce you can skip the following.
 
 **Pre-requisites:**
 - Kernel version 6.12 or greater
