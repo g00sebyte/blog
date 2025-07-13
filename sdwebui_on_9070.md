@@ -3,7 +3,7 @@
 This guide applies specifically to **debian linux distros.** Given you're reading this I imagine you bought GPU for gaming as well, so to make sure it's properly configured on your system let's set that up first. If you've already been gaming on your system and getting expected perforamnce you can skip the following.
 
 **Pre-requisites:**
-- Kernel version 6.12 or greater
+- Kernel version 6.12 or greater (As of writing this works with `6.15.6-061506-generic` on Linux Mint 22.1)
 - Mesa 25 or higher
 - [amdgpu linux firmware](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/t)
 
@@ -52,13 +52,13 @@ You'll want to add the below arguments:
 
 Note: --medvram isn't necessary but subjectively seems to help with pytorch's bad habit of over-allocating memory
 
-ii) Uncomment and set the python command as below:
+Next, uncomment and set the python command as below:
 
 python_cmd="python3.10"
 
 Note: the use of python3.10 specifically comes from SD WebUI itself, refer to: https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Install-and-Run-on-AMD-GPUs#automatic-installation
 
-iii) Add the following to the end of the file:
+Add the following to the end of the file:
 
 ```
 export TORCH_COMMAND='pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/rocm6.3'
@@ -67,3 +67,5 @@ export MIGRAPHX_TRACE_EVAL=1
 ```
 
 **5. Run `./webui.sh`**
+
+This should setup and install pytorch to a version using rocm6.3. If you get errors, you might need to update pip via `python3.10 -m pip install --upgrade pip`.
